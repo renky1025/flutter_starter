@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'banner.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:fluttertoast/fluttertoast.dart';
 
 
 Future<Post> fetchPost() async {
@@ -115,9 +116,23 @@ class _HomePageState extends State<HomePage> {
         }
         return homePage;
       case 1:
-        if (bookPage == null) {
-          bookPage = new Center(child: new Text("图书"));
-        }
+//        if (bookPage == null) {
+//          bookPage = new Center(child: new Text("图书"));
+//        }
+        bookPage = new Center(
+            child: RaisedButton(
+              child: const Text('Show toast'),
+              onPressed: () => Fluttertoast.showToast(
+                  msg: "This is Center Short Toast",
+                  toastLength: Toast.LENGTH_SHORT,
+                  gravity: ToastGravity.BOTTOM,
+                  timeInSecForIos: 1,
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.red
+              ),
+            ),
+          )
+        ;
         return bookPage;
       case 2:
 //        musicPage = new Center(
