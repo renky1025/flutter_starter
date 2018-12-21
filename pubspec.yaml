@@ -22,6 +22,7 @@ dependencies:
   english_words: ^3.1.0
   http: ^0.12.0
   fluttertoast: ^2.1.5
+  web_socket_channel: ^1.0.9
 
 
 dev_dependencies:
@@ -40,9 +41,11 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-     - images/demo01.jpg
-     - images/demo02.jpg
-     - images/demo03.jpg
+#     - images/demo01.jpg
+#     - images/demo02.jpg
+#     - images/demo03.jpg
+  # to add assets to your application with the whole folder
+     - images/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
